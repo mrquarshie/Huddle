@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "Starting TownSquare Development Environment..."
+echo "Starting Huddle Development Environment..."
 echo
 
 echo "Installing server dependencies..."
 npm install
 
 echo "Installing client dependencies..."
-cd townsquare-frontend
+cd huddle-frontend
 npm install
 cd ..
 

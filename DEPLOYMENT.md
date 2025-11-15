@@ -1,6 +1,6 @@
 # Production Deployment Guide
 
-This guide covers deploying TownSquare Marketplace to production environments.
+This guide covers deploying Huddle Marketplace to production environments.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Create a `.env` file in the `server` directory with production values:
 
 ```env
 # Database
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/townsquare
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/huddle
 
 # JWT Secret (Generate a strong secret)
 JWT_SECRET=your_super_strong_jwt_secret_here_use_openssl_rand_hex_64
@@ -62,7 +62,7 @@ openssl rand -hex 64
    // ecosystem.config.js
    module.exports = {
      apps: [{
-       name: 'townsquare-api',
+       name: 'huddle-api',
        script: 'server/index.js',
        instances: 'max',
        exec_mode: 'cluster',
@@ -98,11 +98,11 @@ openssl rand -hex 64
    COPY server/ ./server/
 
    # Build frontend
-   COPY townsquare-frontend/ ./townsquare-frontend/
-   RUN cd townsquare-frontend && npm ci && npm run build
+   COPY huddle-frontend/ ./huddle-frontend/
+   RUN cd huddle-frontend && npm ci && npm run build
 
    # Copy built frontend to server
-   RUN cp -r townsquare-frontend/build ./server/
+   RUN cp -r huddle-frontend/build ./server/
 
    EXPOSE 5000
 
@@ -251,10 +251,10 @@ app.get('/health', (req, res) => {
 ### 1. Database Backups
 ```bash
 # MongoDB backup
-mongodump --uri="mongodb://localhost:27017/townsquare" --out=backup/
+mongodump --uri="mongodb://localhost:27017/huddle" --out=backup/
 
 # Restore
-mongorestore --uri="mongodb://localhost:27017/townsquare" backup/townsquare/
+mongorestore --uri="mongodb://localhost:27017/huddle" backup/huddle/
 ```
 
 ### 2. File Backups

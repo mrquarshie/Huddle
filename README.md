@@ -1,4 +1,4 @@
-# TownSquare Marketplace
+# Huddle Marketplace
 
 A student marketplace webapp for Ghana universities where students can buy and sell items within their university communities.
 
@@ -40,7 +40,7 @@ A student marketplace webapp for Ghana universities where students can buy and s
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd TownSquare
+   cd Huddle
    ```
 
 2. **Install dependencies**
@@ -49,7 +49,7 @@ A student marketplace webapp for Ghana universities where students can buy and s
    npm install
    
    # Install client dependencies
-   cd townsquare-frontend
+   cd huddle-frontend
    npm install
    cd ..
    ```
@@ -58,7 +58,7 @@ A student marketplace webapp for Ghana universities where students can buy and s
    
    Create a `.env` file in the `server` directory:
    ```env
-   MONGODB_URI=mongodb://localhost:27017/townsquare
+   MONGODB_URI=mongodb://localhost:27017/huddle
    JWT_SECRET=your_super_secret_jwt_key_here
    PORT=5000
    NODE_ENV=development
@@ -129,13 +129,13 @@ A student marketplace webapp for Ghana universities where students can buy and s
 ## Project Structure
 
 ```
-TownSquare/
+Huddle/
 ├── server/                 # Backend API
 │   ├── models/            # Database models
 │   ├── routes/            # API routes
 │   ├── middleware/        # Custom middleware
 │   └── index.js          # Server entry point
-├── townsquare-frontend/   # React frontend
+├── huddle-frontend/   # React frontend
 │   ├── src/
 │   │   ├── components/    # Reusable components
 │   │   ├── pages/         # Page components

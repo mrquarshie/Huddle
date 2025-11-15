@@ -41,15 +41,15 @@ app.use('/api/universities', require('./routes/universities'));
 
 // Serve static files from React app in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../townsquare-frontend/build')));
+  app.use(express.static(path.join(__dirname, '../huddle-frontend/build')));
   
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../townsquare-frontend/build/index.html'));
+    res.sendFile(path.join(__dirname, '../huddle-frontend/build/index.html'));
   });
 }
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/townsquare', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/huddle', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

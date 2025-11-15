@@ -102,7 +102,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero-section">
-        <h1>Welcome to TownSquare</h1>
+        <h1>Welcome to Huddle</h1>
         <p>Buy and sell items within Ghanaian universities</p>
         
         <form onSubmit={handleSearch} className="search-form">

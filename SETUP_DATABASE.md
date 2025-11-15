@@ -37,7 +37,7 @@ The "server error" during registration is likely because MongoDB is not installe
 3. **Update server configuration:**
    - Create `server/.env` file with:
    ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/townsquare
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/huddle
    JWT_SECRET=your_super_secret_jwt_key_here
    PORT=5000
    NODE_ENV=development

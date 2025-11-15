@@ -1,14 +1,14 @@
 {
-  "name": "townsquare-marketplace",
+  "name": "huddle-marketplace",
   "version": "1.0.0",
   "description": "A student marketplace webapp for Ghana universities",
   "main": "server/index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",
-    "client": "cd townsquare-frontend && npm start",
-    "build": "cd townsquare-frontend && npm run build",
-    "install-client": "cd townsquare-frontend && npm install",
+    "client": "cd huddle-frontend && npm start",
+    "build": "cd huddle-frontend && npm run build",
+    "install-client": "cd huddle-frontend && npm install",
     "install-server": "npm install",
     "install-all": "npm run install-server && npm run install-client",
     "start": "node server/index.js"
@@ -30,6 +30,6 @@
     "concurrently": "^8.2.0"
   },
   "keywords": ["marketplace", "students", "ghana", "universities"],
-  "author": "TownSquare Team",
+  "author": "Huddle Team",
   "license": "MIT"
 }

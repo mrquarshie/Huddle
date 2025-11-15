@@ -1,12 +1,12 @@
 @echo off
-echo Starting TownSquare Development Environment...
+echo Starting Huddle Development Environment...
 echo.
 
 echo Installing server dependencies...
 call npm install
 
 echo Installing client dependencies...
-cd townsquare-frontend
+cd huddle-frontend
 call npm install
 cd ..
 

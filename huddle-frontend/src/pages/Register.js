@@ -106,7 +106,7 @@ const Register = () => {
   return (
     <div className="auth-container">
       <form onSubmit={handleSubmit} className="auth-form">
-        <h2>Join TownSquare</h2>
+        <h2>Join Huddle</h2>
         
         {error && <div className="error-message">{error}</div>}
         
