@@ -26,7 +26,9 @@ const Navbar = () => {
         <div className="nav-links">
           {user ? (
             <>
-              <span>Welcome, {user.name}</span>
+              <Link to={`/user/${user._id}`} className="user-profile-link">
+                <span>Welcome, {user.name}</span>
+              </Link>
               <span className={`user-tag ${user.role}`}>
                 {user.role}
               </span>
@@ -36,7 +38,6 @@ const Navbar = () => {
                   <Link to="/my-items">My Items</Link>
                 </>
               )}
-              <Link to="/dashboard">Dashboard</Link>
               <button onClick={handleLogout}>Logout</button>
             </>
           ) : (

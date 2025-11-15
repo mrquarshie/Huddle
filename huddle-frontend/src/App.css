@@ -384,6 +384,33 @@ body {
   font-weight: 600;
 }
 
+.item-info .seller-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.item-info .seller-link:hover {
+  background: #357abd;
+}
+
+.user-profile-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.user-profile-link:hover {
+  color: #007AFF;
+}
+
 /* Search Form */
 .search-form {
   display: flex;

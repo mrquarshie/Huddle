@@ -164,6 +164,15 @@ const Home = () => {
                     <p className="price">GHS {item.price}</p>
                     <p className="university">{item.university}</p>
                     <p className="condition">{item.condition}</p>
+                    {item.seller && (
+                      <Link 
+                        to={`/user/${item.seller._id}`} 
+                        className="seller-link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        View Seller Profile
+                      </Link>
+                    )}
                   </div>
                 </Link>
               </div>

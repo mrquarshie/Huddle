@@ -38,6 +38,7 @@ app.use((err, req, res, next) => {
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/items', require('./routes/items'));
 app.use('/api/universities', require('./routes/universities'));
+app.use('/api/users', require('./routes/users'));
 
 // Serve static files from React app in production
 if (process.env.NODE_ENV === 'production') {
