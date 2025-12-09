@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import AddItem from './pages/AddItem';
 import MyItems from './pages/MyItems';
 import UserProfile from './pages/UserProfile';
+import ItemDetail from './pages/ItemDetail';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route path="/add-item" element={<AddItem />} />
               <Route path="/my-items" element={<MyItems />} />
               <Route path="/user/:id" element={<UserProfile />} />
+              <Route path="/item/:id" element={<ItemDetail />} />
             </Routes>
           </main>
         </div>

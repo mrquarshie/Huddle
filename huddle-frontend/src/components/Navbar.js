@@ -1,54 +1,67 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
     navigate('/');
   };
 
-  return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          Huddle
-        </Link>
-        
-        <div className="nav-search">
-          <input type="text" placeholder="Search items..." />
-          <button>Search</button>
-        </div>
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
+  };
 
-        <div className="nav-links">
-          {user ? (
-            <>
-              <Link to={`/user/${user._id}`} className="user-profile-link">
-                <span>Welcome, {user.name}</span>
-              </Link>
-              <span className={`user-tag ${user.role}`}>
-                {user.role}
-              </span>
-              {user.role === 'seller' && (
-                <>
-                  <Link to="/add-item">Add Item</Link>
-                  <Link to="/my-items">My Items</Link>
-                </>
-              )}
-              <button onClick={handleLogout}>Logout</button>
-            </>
-          ) : (
-            <>
-              <Link to="/login">Login</Link>
-              <Link to="/register">Register</Link>
-            </>
-          )}
-        </div>
+  return (
+    <header className="header">
+      <Link to="/" className="logo">
+        Huddle
+      </Link>
+      
+      <nav className="nav">
+        <Link to="/" className={`nav-link ${isActive('/')}`}>
+          Browse
+        </Link>
+        <Link to="/" className="nav-link">
+          How It Works
+        </Link>
+        <Link to="/" className="nav-link">
+          Categories
+        </Link>
+        <Link to="/" className="nav-link">
+          About
+        </Link>
+      </nav>
+
+      <div className="header-btns">
+        {user ? (
+          <>
+            <Link to="/add-item" className="btn btn-secondary">
+              ➕ Post Listing
+            </Link>
+            <Link to={`/user/${user._id}`} className="btn btn-outline">
+              👤 {user.name?.split(' ')[0] || 'Profile'}
+            </Link>
+            <button onClick={handleLogout} className="btn btn-outline">
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/login" className="btn btn-outline">
+              Login
+            </Link>
+            <Link to="/register" className="btn btn-secondary">
+              Join Huddle
+            </Link>
+          </>
+        )}
       </div>
-    </nav>
+    </header>
   );
 };
 

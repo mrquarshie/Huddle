@@ -1,43 +1,43 @@
+/* UserProfile specific styles - complements App.css */
 .user-profile {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 40px 60px;
+  background: white;
+  min-height: calc(100vh - 100px);
 }
 
 .profile-header {
   display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  background: white;
+  gap: 30px;
+  margin-bottom: 50px;
+  padding: 40px;
+  background: #f8f8f8;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  border: 2px solid #e0e0e0;
 }
 
 .profile-image-container {
   flex-shrink: 0;
 }
 
-.profile-image {
-  width: 150px;
-  height: 150px;
+.profile-image,
+.profile-image-placeholder {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #4a90e2;
+  border: 4px solid #003366;
 }
 
 .profile-image-placeholder {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #003366;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  font-weight: bold;
-  color: white;
-  border: 4px solid #4a90e2;
+  font-size: 3em;
+  font-weight: 700;
 }
 
 .profile-info {
@@ -45,171 +45,105 @@
 }
 
 .profile-info h1 {
-  margin: 0 0 0.5rem 0;
-  font-size: 2rem;
+  font-size: 2.5em;
   color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .profile-university {
-  font-size: 1.1rem;
+  font-size: 1.2em;
   color: #666;
-  margin: 0.5rem 0;
+  margin-bottom: 8px;
+}
+
+.profile-campus {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 8px;
 }
 
 .profile-role {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  background: #4a90e2;
-  color: white;
+  padding: 6px 16px;
+  background: #FFCC00;
+  color: #003366;
   border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin: 0.5rem 0;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 10px;
 }
 
 .profile-phone {
   color: #666;
-  margin: 0.5rem 0;
+  margin-top: 10px;
 }
 
 .profile-rating {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .rating-stars {
   display: flex;
-  gap: 0.25rem;
+  gap: 4px;
 }
 
-.rating-stars .star {
-  font-size: 1.5rem;
+.star {
   color: #ddd;
-  transition: color 0.2s;
+  font-size: 1.5em;
 }
 
-.rating-stars .star.filled {
-  color: #ffc107;
+.star.filled {
+  color: #FFCC00;
 }
 
 .rating-value {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.3em;
   color: #333;
 }
 
 .rating-count {
-  color: #666;
-  font-size: 0.9rem;
+  color: #999;
+  font-size: 1em;
 }
 
 .profile-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 40px;
 }
 
 .profile-section {
   background: white;
-  padding: 2rem;
+  padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0e0e0;
 }
 
 .profile-section h2 {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.5rem;
+  font-size: 2em;
   color: #333;
-  border-bottom: 2px solid #4a90e2;
-  padding-bottom: 0.5rem;
-}
-
-.items-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.item-card {
-  text-decoration: none;
-  color: inherit;
-  background: #f8f9fa;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.item-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.item-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.item-info {
-  padding: 1rem;
-}
-
-.item-info h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.item-info .price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #4a90e2;
-  margin: 0.5rem 0;
-}
-
-.item-info .condition {
-  color: #666;
-  font-size: 0.9rem;
-  text-transform: capitalize;
-}
-
-.no-items {
-  text-align: center;
-  padding: 3rem;
-  color: #666;
-}
-
-.loading {
-  text-align: center;
-  padding: 3rem;
-  font-size: 1.2rem;
-  color: #666;
-}
-
-.error-message {
-  text-align: center;
-  padding: 2rem;
-  background: #fee;
-  color: #c33;
-  border-radius: 8px;
-  margin: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
+  .user-profile {
+    padding: 20px;
+  }
+
   .profile-header {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    align-items: center;
+    padding: 30px 20px;
   }
 
   .profile-rating {
     justify-content: center;
   }
-
-  .items-grid {
-    grid-template-columns: 1fr;
-  }
 }
-

@@ -59,8 +59,9 @@ const UserProfile = () => {
         </div>
         <div className="profile-info">
           <h1>{user.name}</h1>
-          <p className="profile-university">{user.university}</p>
-          <p className="profile-role">{user.role}</p>
+          <p className="profile-university">🏫 {user.university}</p>
+          {user.campus && <p className="profile-campus">📍 {user.campus}</p>}
+          <p className="profile-role">{user.role === 'seller' ? '🛒 Seller' : '🛍️ Buyer'}</p>
           {user.phone && <p className="profile-phone">📞 {user.phone}</p>}
           
           {/* Rating Display */}
